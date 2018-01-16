@@ -1,0 +1,120 @@
+.main-banner {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.main-banner-title {}
+.main-banner-text {
+  max-width: 850px;
+  font-size: 19px;
+  color: rgba(#fff, 0.34);
+  text-align: center;
+}
+.main-banner-btn {}
+
+.main-banner-title {
+    svg {
+        min-width:800px;
+    }
+    .st0 {fill:none;fill-opacity:0;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:703,0;}
+    .st1 {stroke-dasharray: 270; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:270; animation:anim 0.5s 0s   1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st2 {stroke-dasharray: 310; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:310; animation:anim 0.5s 0.3s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st3 {stroke-dasharray: 375; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:375; animation:anim 0.5s 0.6s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st4 {stroke-dasharray: 330; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:330; animation:anim 0.5s 0.9s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st5 {stroke-dasharray: 260; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:260; animation:anim 0.5s 1.2s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st6 {stroke-dasharray: 465; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:465; animation:anim 0.5s 1.5s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st7 {stroke-dasharray: 330; stroke: #00FFE4; fill: #00FFE4; stroke-dashoffset:330; animation:anim 0.5s 1.8s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st8 {stroke-dasharray: 705; stroke: #ffffff; fill: #ffffff; stroke-dashoffset:705; animation:anim 0.5s 2.1s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st9 {stroke-dasharray: 400; stroke: #ffffff; fill: #ffffff; stroke-dashoffset:400; animation:anim 0.5s 2.4s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st10 {stroke-dasharray: 360;stroke: #ffffff; fill: #ffffff; stroke-dashoffset:360; animation:anim 0.5s 2.7s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st11 {stroke-dasharray: 180;stroke: #ffffff; fill: #ffffff; stroke-dashoffset:180; animation:anim 0.5s 3s   1 linear forwards, animFill 1s 4s 1 linear forwards;}
+    .st12 {stroke-dasharray: 370;stroke: #ffffff; fill: #ffffff; stroke-dashoffset:370; animation:anim 0.5s 3.3s 1 linear forwards, animFill 1s 4s 1 linear forwards;}
+}
+
+@keyframes anim {
+  100% {stroke-dashoffset:0;}
+}
+@keyframes animFill {
+  100% {fill-opacity:0.8;}
+}
+
+//batton
+
+.main-banner-btn {
+  margin-top: 40px;
+  text-decoration: none;
+  padding:20px 50px;
+  border:1px solid rgba(255,255,255,0.5);
+  color:#fff;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background: transparent;
+  position: relative;
+  transition:0.3s border-color;
+  font-size: 16px;
+  font-weight: bold;
+  transition:1s all;
+  cursor: pointer;
+  color:rgba(255,255,255,0.8);
+}
+.main-banner-btn:before {
+    content:'';
+    width:100%;
+    height:100%;
+    border:1px solid rgba(255,255,255,1);
+    border-radius: 30px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    opacity:0;
+}
+.main-banner-btn:hover {
+    border-color: rgba(255,255,255,1);
+    background: rgba(255,255,255,0.04);
+}
+.main-banner-btn:hover:before {
+    animation: animBtn 1s 0s 1 linear;
+}
+
+@keyframes animBtn {
+    0% {
+        opacity:0.3;
+    }
+    100% {
+        width:180%;
+        border-radius: 90px;
+        height:250%;
+        opacity:0;
+    }
+}
+
+.main-banner-indicator {
+  width: 25px;
+  height: 50px;
+  border: 1px solid rgba(#fff, 0.6);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 13px;
+}
+.main-banner-indicator:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(#fff, 0.9);
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  animation: animBannerInd 0.8s 0s infinite alternate;
+}
+@keyframes animBannerInd {
+  0% {top: 10px;}
+  100% {top: 30px;}
+}

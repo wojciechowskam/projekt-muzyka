@@ -1,0 +1,44 @@
+.main-contact {
+
+}
+.main-contact-text {
+  color: #444;
+  margin-top: 70px;
+}
+.main-contact-form {
+  margin-top: 70px;
+}
+.main-contact-form .form-row {
+  margin-bottom: 25px;
+}
+.main-contact-form label {
+  position: absolute;
+  left: -999999px;//wywalam labele poza ekran, są dostępne ale nie widoczne
+}
+.main-contact-form input[type=text],
+.main-contact-form input[type=email],
+.main-contact-form textarea {
+  border: 1px solid #c5c5c5;
+  padding: 15px;
+  display: block;
+  max-width: 560px;
+  width: 100%;
+  border-radius: 6px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  transition: 0.3s all;
+  &:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: inset 0 0 0 1px #000;
+  }
+  &.error {
+    border-color: red;
+    box-shadow: inset 0 0 0 1px red;
+  }
+}
+.main-contact-form textarea {
+  resize: none;
+  max-width: 100%;
+  min-height: 150px;
+}

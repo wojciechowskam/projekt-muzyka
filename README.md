@@ -1,2 +1,2 @@
-# projekt-muzyka
-Przykładowy opis repozytorium warsztatów
+# music project
+An example description of the workshop repository
